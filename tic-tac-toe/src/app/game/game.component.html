@@ -1,0 +1,9 @@
+<h2>Tic Tac Toe</h2>
+
+<table>
+  <tr *ngFor="let row of board; let rowIndex = index">
+    <td *ngFor="let col of row; let colIndex = index" (click)="makeMove(rowIndex, colIndex)">{{ col }}</td>
+  </tr>
+</table>
+
+<p>Current player: {{ currentPlayer }}</p>

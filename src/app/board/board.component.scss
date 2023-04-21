@@ -1,0 +1,10 @@
+main{
+    dispaly:grid;
+    grid-template-cloumns:200px 200px 200px;
+    prid-gap:0px;
+}
+
+app-square{
+    border: 1px grey solid;
+    height: 200px;
+}

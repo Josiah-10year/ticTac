@@ -1,32 +1,27 @@
 {
   "$schema": "node_modules/nx/schemas/project-schema.json",
-  "name": "tictac",
+  "name": "tic-tac-toe",
   "projectType": "application",
-  "generators": {
-    "@schematics/angular:component": {
-      "style": "scss"
-    }
-  },
+  "generators": {},
   "sourceRoot": "src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "options": {
-        "outputPath": "dist/tictac",
+        "outputPath": "dist/tic-tac-toe",
         "index": "src/index.html",
         "main": "src/main.ts",
         "polyfills": [
           "zone.js"
         ],
         "tsConfig": "tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
         "assets": [
           "src/favicon.ico",
           "src/assets"
         ],
         "styles": [
-          "src/styles.scss"
+          "src/styles.css"
         ],
         "scripts": []
       },
@@ -52,13 +47,7 @@
           "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
-          "namedChunks": true,
-          "fileReplacements": [
-            {
-              "replace": "src/environments/environment.ts",
-              "with": "src/environments/environment.development.ts"
-            }
-          ]
+          "namedChunks": true
         }
       },
       "defaultConfiguration": "production",
@@ -70,10 +59,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "tictac:build:production"
+          "browserTarget": "tic-tac-toe:build:production"
         },
         "development": {
-          "browserTarget": "tictac:build:development"
+          "browserTarget": "tic-tac-toe:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -81,7 +70,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "tictac:build"
+        "browserTarget": "tic-tac-toe:build"
       }
     },
     "test": {
@@ -92,13 +81,12 @@
           "zone.js/testing"
         ],
         "tsConfig": "tsconfig.spec.json",
-        "inlineStyleLanguage": "scss",
         "assets": [
           "src/favicon.ico",
           "src/assets"
         ],
         "styles": [
-          "src/styles.scss"
+          "src/styles.css"
         ],
         "scripts": []
       }
